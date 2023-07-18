@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="DA_team">
+  <meta name="keywords" content="Show UP!">
+  <meta name="description" content="Show UP!">
+  <meta property="og:description" content="Show UP!">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&amp;family=Nanum+Gothic+Coding&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&amp;display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/first.css">
+
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PFXMD2G6EL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PFXMD2G6EL');
+  </script>
+<style>
+   .wrapper {
+  color: #FFFFFF; 
+  background: #FFFFFF;
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+  justify-content: center; /* Center the grid horizontally */
+}
+  .box-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #FDC4BD;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px; /* Add spacing between boxes */
+  }
+
+  .box:last-child {
+    margin-right: 0; /* Remove right margin for the last box in each row */
+  }
+
+  .box::before {
+  content: attr(data-content);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #6c7574a2;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>    
+  <div class="container" style="background-color: #F0F8F8;">
+    <section id="main" class="py-3">
+      <div style="text-align: left; margin-top: 5px;">
+        <p class="main_desc my-3 left-align" style="font-family: 'Outfit'; font-style: normal; font-weight: 700; font-size: 80px; line-height: 50px; color: #55BDB3; white-space: nowrap;">Show UP!</p>
+      </div>
+
+      <div style="text-align: left; margin-top: 30px;">
+        <br><br>
+        <p class="main_desc left-align" style="width: 307.23px; height: 45px; font-family: 'Outfit'; font-style: normal; font-weight: 700; font-size: 30px; line-height: 80px; color: #000000; text-align: left; white-space: nowrap; margin-bottom: 10px; margin-top: 10px;">
+          당신이 보여줄 공연의 런타임(상연시간)을 알려주세요</p>
+      </div>
+      <br>
+      <!-- range  -->
+      <div class="wrapper" style="margin-top: 50px;">
+        <div class="box-row">
+          <div class="box" data-content="20분 미만"></div>
+          <div class="box" data-content="20-40분"></div>
+          <div class="box" data-content="40-80분"></div>
+        </div>
+        <div class="box-row">
+          <div class="box" data-content="80-120분"></div>
+          <div class="box" data-content="120-150분"></div>
+          <div class="box" data-content="150분 이상"></div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <section id="main2" class="py-4">
+      <div style="display: flex; align-items: flex-end; justify-content: flex-end; position: relative;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="begin()" style="width: 150px; height: 40px; font-family: 'Outfit'; font-style: normal; font-weight: 500; font-size: 14px; line-height: 18px; color: #55BDB3; border-color: #55BDB4; margin-right: 10px; margin-bottom: 10px; position: absolute; bottom: 0; margin-top: 10px;">뒤로가기</button>
+      </div>
+    </section>
+  </div>
+  <script src="/static/script.js"></script>
+
+</body>
+</html>
