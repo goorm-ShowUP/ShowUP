@@ -16,10 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-
+from show_up import views
 
 urlpatterns = [
     # path('show_up/', include('show_up.urls')),
     path("admin/", admin.site.urls),
+    path('price/', views.price, name="price"),
+    path('genre/', views.genre, name="genre"),
+    path('runtime/', views.runtime, name="runtime"),
+    path('day/', views.day, name="day"),
+    path('age/', views.age, name="age"),
+    path('result/', views.result, name="result"),
     path('', include('show_up.urls')),
 ]

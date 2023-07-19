@@ -1,0 +1,12 @@
+<form action="{% url 'result' %}" method="post">
+    {% csrf_token %}
+    관람 연령을 선택하세요.<br><br>
+    <button type="submit" name="age" value=0>어린이</button>
+    <button type="submit" name="age" value=10>10대</button>
+    <button type="submit" name="age" value=20>20대</button>
+    <button type="submit" name="age" value=30>30대</button>
+    <button type="submit" name="age" value=40>40대</button>
+    <button type="submit" name="age" value=50>50대</button>
+    <button type="submit" name="age" value=60>60대</button>
+    <button type="submit" name="age" value=70>70대 이상</button>
+</form>

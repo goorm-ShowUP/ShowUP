@@ -1,0 +1,13 @@
+<form action="{% url 'runtime' %}" method="post">
+    {% csrf_token %}
+    장르를 선택하세요.<br><br>
+    <button type="submit" name="genre" value="theater">연극</button>
+    <button type="submit" name="genre" value="classic">클래식</button>
+    <button type="submit" name="genre" value="korean_music">한국음악</button>
+    <button type="submit" name="genre" value="complex">복합</button>
+    <button type="submit" name="genre" value="musical">뮤지컬</button>
+    <button type="submit" name="genre" value="popular_music">대중음악</button>
+    <button type="submit" name="genre" value="dancing">무용</button>
+    <button type="submit" name="genre" value="circus_magic">서커스/마술</button>
+    <button type="submit" name="genre" value="popular_dancing">대중무용</button>
+</form>

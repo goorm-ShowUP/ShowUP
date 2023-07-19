@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    티켓 가격을 입력해주세요
+    <div class = "container">
+        <form action = "{% url 'genre' %}" method='post'>
+            {% csrf_token %}
+            티켓 가격:<input type="text" name="price">
+            <br>
+            <input type="submit" value="제출">
+        </form>
+    </div>
+</body>
+</html>
