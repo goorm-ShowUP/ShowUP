@@ -1,0 +1,9 @@
+{% if area_list %}
+<ul>
+  {% for area in area_list %}
+  <li><a href="/choosearea/{{area}}">{{area}}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>선택할 수 있는 지역이 없습니다.</p>
+{% endif %}
