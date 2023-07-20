@@ -1,10 +1,13 @@
-<form action="{% url 'age' %}" method="post">
-    {% csrf_token %}
-    공연 기간을 선택하세요.<br><br>
-    <button type="submit" name="day" value=1>하루</button>
-    <button type="submit" name="day" value=2>2~3일</button>
-    <button type="submit" name="day" value=4>4~7일</button>
-    <button type="submit" name="day" value=8>8~13일</button>
-    <button type="submit" name="day" value=14>14일~</button>
-    
-</form>
+<!DOCTYPE html>
+<body>
+    공연 기간을 입력해주세요
+    <div class = "container">
+        <form action = "{% url 'age' %}" method='post'>
+            {% csrf_token %}
+            공연 기간(일):<input type="text" name="day">
+            <br>
+            <input type="submit" value="제출">
+        </form>
+    </div>
+</body>
+</html>

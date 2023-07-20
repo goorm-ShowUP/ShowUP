@@ -1,11 +1,15 @@
 <form action="{% url 'day' %}" method="post">
     {% csrf_token %}
     런타임을 선택하세요.<br><br>
-    <button type="submit" name="runtime" value=20>~20분</button>
-    <button type="submit" name="runtime" value=40>~40분</button>
-    <button type="submit" name="runtime" value=60>~60분</button>
-    <button type="submit" name="runtime" value=100>~100분</button>
-    <button type="submit" name="runtime" value=150>~150분</button>
-    <button type="submit" name="runtime" value=180>~180분</button>
+    <button type="submit" name="runtime" value=0>20분 미만</button>
+    <button type="submit" name="runtime" value=20>20분~40분</button>
+    <button type="submit" name="runtime" value=40>40분~80분</button>
+    <button type="submit" name="runtime" value=80>80분~100분</button>
+    <button type="submit" name="runtime" value=100>100분~110분</button>
+    <button type="submit" name="runtime" value=110>110분~120분</button>
+    <button type="submit" name="runtime" value=120>120분~150분</button>
+    <button type="submit" name="runtime" value=150>150분~180분</button>
+    <button type="submit" name="runtime" value=180>180분 이상</button>
+    <button type="submit" name="runtime" value=1440>예외(페스티벌)</button>
     
 </form>
