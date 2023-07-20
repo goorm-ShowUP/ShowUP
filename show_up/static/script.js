@@ -38,3 +38,12 @@ boxes.forEach((box) => {
     console.log("Box clicked:", content);
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const backButton = document.getElementById('backButton');
+
+  // Add a click event listener to the button
+  backButton.addEventListener('click', function() {
+    begin();
+  });
+});
+

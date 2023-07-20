@@ -33,6 +33,8 @@
   
 </head>
 
+
+
 <body>    
   <div class="container" style="background-color: #F0F8F8;">
     <section id="main" class="py-3">
@@ -42,27 +44,33 @@
 
       <div style="text-align: left; margin-top: 30px;">
         <p class="main_desc left-align" style="width: 307.23px; height: 45px; font-family: 'Outfit'; font-style: normal; font-weight: 700; font-size: 30px; line-height: 80px; color: #000000; text-align: left; white-space: nowrap; margin-bottom: 10px; margin-top: 10px;">
-            당신이 보여줄 공연의 티켓 가격을 알려주세요</p>
+            당신이 보여줄 공연의 티켓 가격을 알려주세요(0~20만원)</p>
       </div>
       <br>
       <!-- range  -->
-      <div class="wrapper"style="margin-top: 10px;">
+      
+      <div class="wrapper" style="margin-top: 10px;">
         <div class="range">
-            <div class="value2">무료</div>
-          <input type="range" min="0" max="200000" value="0" id="range2" /> 
-             <div class="value2">20만원</div>
-        </div>
-      <!-- range  -->
+          <div class="value2" style="margin-top: 40px;">
+            무료
+          </div><p class="won"style="margin-top: 60px;margin-left:50px">원</p>
+          <input type="range" min="0" max="200000" value="0" id="range2" />  </div>
+      </div>
+      <section id="main2" class="py-4" style="display: flex; justify-content: flex-start; align-items: flex-end;">
+
+      <div style="position: relative; margin-left: 20px;margin-top: 60px;">
+        <button id="backButton" type="button" class="btn btn-outline-danger mt-3" style="width: 150px; height: 40px; font-family: 'Outfit'; font-style: normal; font-weight: 500; font-size: 14px; line-height: 18px; color: #55BDB3; border-color: #55BDB4; margin-right: 10px; margin-bottom: 10px; position: absolute; bottom: 0; margin-top: 10px;">
+          뒤로가기
+        </button></section>
 
       </div>
+    </div>
+        
     </section>
     <br>
-    <section id="main2" class="py-4">
-      <div style="display: flex; align-items: flex-end; justify-content: flex-end; position: relative;">
-        <button type="button" class="btn btn-outline-danger mt-3" onclick="begin()" style="width: 150px; height: 40px; font-family: 'Outfit'; font-style: normal; font-weight: 500; font-size: 14px; line-height: 18px; color: #55BDB3; border-color: #55BDB4; margin-right: 10px; margin-bottom: 10px; position: absolute; bottom: 0; margin-top: 10px;">뒤로가기</button>
-      </div>
-    </section>
+    
   </div>
-  
+  <script src="/static/script.js"></script>
+
 </body>
 </html>
