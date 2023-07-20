@@ -30,28 +30,100 @@
     gtag('js', new Date());
     gtag('config', 'G-PFXMD2G6EL');
   </script>
-  
-</head>
+<style>
+   .wrapper {
+  color: #FFFFFF; 
+  background: #FFFFFF;
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+  justify-content: center; /* Center the grid horizontally */
+}
+  .box-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 
+  .box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #FDC4BD;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px; /* Add spacing between boxes */
+  }
+
+  .box:last-child {
+    margin-right: 0; /* Remove right margin for the last box in each row */
+  }
+
+  .box::before {
+  content: attr(data-content);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #6c7574a2;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
 <body>    
   <div class="container" style="background-color: #F0F8F8;">
     <section id="main" class="py-3">
       <div style="text-align: left; margin-top: 5px;">
         <p class="main_desc my-3 left-align" style="font-family: 'Outfit'; font-style: normal; font-weight: 700; font-size: 80px; line-height: 50px; color: #55BDB3; white-space: nowrap;">Show UP!</p>
       </div>
-      <br>
-      <br>
+
       <div style="text-align: left; margin-top: 30px;">
-        <p class="main_desc left-align" style="width: 307.23px; height: 45px; font-family: 'Outfit'; font-style: normal; font-weight: 700; font-size: 30px; line-height: 80px; color: #000000; text-align: left; white-space: nowrap; margin-bottom: 10px;">당신이 보여줄 공연의 관람가를 알려주세요</p>
+        <br><br>
+        <p class="main_desc left-align" style="width: 307.23px; height: 45px; font-family: 'Outfit'; font-style: normal; font-weight: 700; font-size: 30px; line-height: 80px; color: #000000; text-align: left; white-space: nowrap; margin-bottom: 10px; margin-top: 10px;">
+          당신이 보여줄 공연의 관람가를 알려주세요</p>
+      </div>
+      <br>
+      <!-- range  -->
+      <div class="wrapper" style="margin-top: 50px;">
+        <div class="box-row">
+          <div class="box" data-content="전연령"></div>
+          <div class="box" data-content="4세이상"></div>
+          <div class="box" data-content="6세이상"></div>
+        </div>
+        <div class="box-row">
+          <div class="box" data-content="초등학생이상"></div>
+          <div class="box" data-content="12세이상"></div>
+          <div class="box" data-content="15세이상"></div>
+        </div>
+        <div class="box-row">
+          <div class="box" data-content="18세이상"></div>
+        </div>
+        
+      
       </div>
     </section>
-    <section id="main2" class="py-4" style="display: flex; justify-content: flex-start; align-items: flex-end;">
-      <div style="position: relative; margin-left: 20px;">
+    <br>
+    <section id="main2" class="py-4" style="display: flex; justify-content: flex-start; align-items: flex-end;font-family: 'Outfit'; font-style: normal; font-weight: 700; font-size: 30px; line-height: 80px; color: #000000; text-align: left; white-space: nowrap; margin-bottom: 10px; margin-top: 10px;">
+      <div style="position: relative; margin-left: 20px;;font-family: 'Outfit'; font-style: normal;">
         <button id="backButton" type="button" class="btn btn-outline-danger mt-3" style="width: 150px; height: 40px; font-family: 'Outfit'; font-style: normal; font-weight: 500; font-size: 14px; line-height: 18px; color: #55BDB3; border-color: #55BDB4; margin-right: 10px; margin-bottom: 10px; position: absolute; bottom: 0; margin-top: 10px;">
           뒤로가기
         </button>
       </div>
     </section>
   </div>
+  <script src="/static/script.js"></script>
+
 </body>
 </html>
