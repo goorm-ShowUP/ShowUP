@@ -1,10 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-  </head>
-  <body>
-    <a href="price">장고 첫 페이지!</a>
-  </body>
-</html>
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <meta name="author" content="DA_team">
+  <meta name="keywords" content="Show UP!">
+  <meta name="description" content="Show UP!">
+  <meta property="og:description" content="Show UP!">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&amp;family=Nanum+Gothic+Coding&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&amp;display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/first.css">
+
+
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PFXMD2G6EL"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+   
+      gtag('config', 'G-PFXMD2G6EL');
+    </script>
+    <style>
+         @media screen and (min-width: 768px) {
+    .button-container {
+      width: 80%;
+      margin-left: 0; /* Reset the left margin to 0% */
+    }
+
+    #recommendationButton {
+      transform: translateX(-67%); /* Adjust this value to move the button even more to the left */
+    }
+  }
+        .container-centered {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          height: 100vh; /* Adjust the height as needed */
+        }
+        </style>
+</head>
+<body>    
+    <div class="container" style="background-color: #F0F8F8;">
+      <section id="main" class="py-3">
+        <div style="text-align: left; margin-top: 5px;">
+          <p class="main_desc my-3 left-align" style="font-family: 'Outfit'; font-style: normal; font-weight: 700; font-size: 80px; line-height: 50px; color: #55BDB3; white-space: nowrap;">Show UP!</p>
+        </div>
+  
+        <div style="text-align: left; margin-top: 30px;"><br>
+        </br>
+        <p class="main_desc left-align" style="position: absolute; width: 307.23px; height: 45px; font-family: 'Outfit'; font-style: normal; font-weight: 700; font-size: 30px; line-height: 80px; color: #000000; text-align: left; white-space: nowrap;margin-bottom: 20px;">당신의 공연, 최적의 장소에서 보여주세요</p><br>
+        <div style="display: flex;">
+          <div style="text-align: left; margin-right: 10px; margin-top: 90px;">
+            <img src="/static/images/descript2.png" alt="description">
+          </div>
+            
+          <div style="text-align: left;margin-top: -70px;margin-left: 50px;">
+            <img src="/static/images/perform1.png" alt="perform1">
+          </div>
+        </div>
+        <div style="display: flex; align-items: flex-end; justify-content: flex-end; position: relative;">
+            <div class="button-container" style="margin-left: auto; margin-top: -100px;">
+              <a href="price">
+                <button id="recommendationButton" type="button" class="btn btn-outline-danger mt-3 button-centered"style="width: 200px; height: 60px; font-family: 'Outfit'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 18px; color: #55BDB3; border-color: #55BDB3;">
+                  공연장 추천받기
+                </button></a>
+          </div>
+        </div>
+      </section>
+    </div>
+      <section id="result_page" style="display: none;">
+          <form id="formId" class="createform">
+              <input type="hidden" name="csrfmiddlewaretoken" value="KvwruGdx2BAP4rDm7q44rZ9eFKG8REq8DBrHAWY3jBhFvLdxWri72Es7j9EsJ29A">
+          </form>
+          
+
+      </section>
+      <script src="static/js/data.js?after" charset="utf-8"></script>
+      <script src="static/js/start.js?after" charset="utf-8"></script>
+     
+  </div>
+</body></html>

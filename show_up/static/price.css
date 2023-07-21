@@ -1,0 +1,106 @@
+/* styles.css */
+
+/* Container */
+.container {
+    background-color: #F0F8F8;
+  }
+  
+  /* Section - Main */
+  #main {
+    padding-top: 3rem;
+  }
+
+  /* Title - "Show UP!" */
+  .main_title {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 50px;
+    color: #55BDB3;
+    white-space: nowrap;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  
+  .main_desc.left-align {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 80px;
+    color: #000000;
+    text-align: left;
+    white-space: nowrap;
+    margin-bottom: 0.2%;
+    margin-top: 0.1%;
+    width: 307.23px;
+    height: 45px;
+  }
+  
+  /* Form Wrapper */
+
+  
+  /* Form Box-Row */
+  .box-row {
+     top: 50%;
+    left: 5%;
+    position: relative;
+    display: flex;
+  }
+  .ticket-price-input {
+    position: absolute;
+    /* top: 20.2%;
+    left: 34.3%; */
+    width: 200px; /* Add any other required styles for the input element */
+    /* Add any other styles as needed */
+  }
+  /* Form Input Field */
+  input[type="text"] {
+    width:25%;
+  }
+  
+  /* Form Submit Button */
+  input[type="submit"] {
+    top: 1%;
+    left: 33%;
+    width: 100px;
+    height: 30px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #55BDB3;
+    border-color: #55BDB4;
+    position: absolute;
+  }
+  
+  /* Section - Main2 */
+  #main2 {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  
+  /* Back Button */
+  #backButton {
+    top: 22%;
+    left: -3%;
+    width: 150px;
+    height: 40px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #053b36;
+    border-color: #25726c;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    position: absolute;
+    bottom: 0;
+    margin-top: 10px;
+  }
