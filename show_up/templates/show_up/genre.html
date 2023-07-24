@@ -130,23 +130,20 @@
 	<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0 text-center">
-					
-
-					<div class="row row-mt-15em">
-						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-							<span class="intro-text-small">Hand-crafted by <a href="http://gettemplates.co" target="_blank">GetTemplates.co</a></span>
-							<h1 class="cursive-font">Show UP!</h1>	
-						</div>
-						
+		  <div class="row">
+			<div class="col-md-12 col-md-offset-0 text-center">
+			  
+	  
+			  <div class="row row-mt-15em">
+				<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
+				  <span class="intro-text-small"style="font-size:20px;">당신의 공연, 최적의 장소에서 보여주세요</span>
+				  <h1 class="cursive-font">Show UP!</h1>	
+				</div>               
+					  </div>                
 					</div>
-							
-					
+				  </div>
 				</div>
-			</div>
-		</div>
-	</header>
+			  </header>
 
 	
 	
@@ -161,120 +158,129 @@
 			<div class="row">
                 <form action="{% url 'runtime' %}" method="post">
                     {% csrf_token %}
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/play.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/play.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-                            <button type="submit" name="genre" value="theater">연극</button>
-							<p>배우가 각본에 따라 말과 동작으로 관객에게 보여주는 무대 예술</p>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-card-item">
+							<a href="images/play.jpg" class="image-popup">
+								<figure>
+									<div class="overlay"><i class="ti-plus"></i></div>
+									<img src="images/play.jpg" alt="Image" class="img-responsive">
+								</figure>
+							</a>
+							<div class="fh5co-text">
+								<button type="submit" name="genre" value="theater">연극</button>
+								<p>배우가 각본에 따라 말과 동작으로 관객에게 보여주는 무대 예술</p>
+							</div>
 						</div>
-					</a>
-				</div>
+					</div>
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/classic.jpg" class="fh5co-card-item image-popup">
+					<div class="fh5co-card-item">
+					<a href="images/classic.jpg" class="image-popup">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="images/classic.jpg" alt="Image" class="img-responsive">
-						</figure>
+						</figure></a>
 						<div class="fh5co-text">
 							<button type="submit" name="genre" value="classic">서양음악(클래식)</button>
 							<p>서양의 고전음악 및<br> 해외 전통음악</p>
 						</div>
-					</a>
+					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/gukak.jpg" class="fh5co-card-item image-popup">
+					<div class="fh5co-card-item">
+					<a href="images/gukak.jpg" class="image-popup">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="images/gukak.jpg" alt="Image" class="img-responsive">
-						</figure>
+						</figure></a>
 						<div class="fh5co-text">
                             <button type="submit" name="genre" value="korean_music">한국음악(국악)</button>
 							<p>한국에 뿌리를 내린 음악<br>한국적 토양에서 나온 음악 
                             </p>
-
 						</div>
-					</a>
+					</div>
 				</div>
 
 
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/combine2500.jpg" class="fh5co-card-item image-popup">
+					<div class="fh5co-card-item">
+					<a href="images/combine2500.jpg" class="image-popup">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="images/combine2500.jpg" alt="Image" class="img-responsive">
-						</figure>
+						</figure></a>
 						<div class="fh5co-text">
 							<button type="submit" name="genre" value="complex">복합</button>
 							<p>대분류 중 <br>두 개 이상의 혼합 공연</p>
 						</div>
-					</a>
+					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/muscial1200.jpg" class="fh5co-card-item image-popup">
+					<div class="fh5co-card-item">
+					<a href="images/muscial1200.jpg" class="image-popup">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="images/muscial1200.jpg" alt="Image" class="img-responsive">
-						</figure>
+						</figure></a>
 						<div class="fh5co-text">
 							<button type="submit" name="genre" value="musical">뮤지컬</button>
 							<p>현대화된 상업적, 대중적 음악극<br>음악, 노래, 무용을 결합</p>
 						</div>
-					</a>
+					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/public.jpg" class="fh5co-card-item image-popup">
+					<div class="fh5co-card-item">
+					<a href="images/public.jpg" class="image-popup">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="images/public.jpg" alt="Image" class="img-responsive">
-						</figure>
+						</figure></a>
 						<div class="fh5co-text">
 							<button type="submit" name="genre" value="popular_music">대중음악</button>
 							<p>매스미디어나 음악 산업에 의해<br> 유통되는 음악</p>
 						</div>
-					</a>
+					</div>
 				</div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/ballet.jpg" class="fh5co-card-item image-popup">
+					<div class="fh5co-card-item">
+					<a href="images/ballet.jpg" class="image-popup">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="images/ballet.jpg" alt="Image" class="img-responsive">
-						</figure>
+						</figure></a>
 						<div class="fh5co-text">
 							<button type="submit" name="genre" value="dancing">무용</button>
 							<p>음악에 맞추어 율동적인 동작으로 <br>감정과 의지를 표현함</p>
 						</div>
-					</a>
+					</div>
 				</div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/circus.jpg" class="fh5co-card-item image-popup">
+					<div class="fh5co-card-item">
+					<a href="images/circus.jpg" class="image-popup">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="images/circus.jpg" alt="Image" class="img-responsive">
-						</figure>
+						</figure></a>
 						<div class="fh5co-text">
                             <button type="submit" name="genre" value="circus_magic">서커스/마술</button>
                             <p>서커스: 곡예로 육체의 기민성을 응용함<br>마술: 불가능하고 기묘한 현상을 엮어냄</p>
                         </div>
-					</a>
+					</div>
 				</div>
 
                 <div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/sports1200.jpg" class="fh5co-card-item image-popup">
+					<div class="fh5co-card-item">
+					<a href="images/sports1200.jpg" class="image-popup">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="images/sports1200.jpg" alt="Image" class="img-responsive">
-						</figure>
+						</figure></a>
 						<div class="fh5co-text">
 							<button type="submit" name="genre" value="popular_dancing">대중무용</button>
 							<p>스트리트<br>/스포츠댄스</p>
 							
 						</div>
-					</a>
+					</div>
 				</div>
 
 			</div>
