@@ -1,0 +1,9 @@
+{% if concerthall_list %}
+<ul>
+  {% for concerthall in concerthall_list %}
+  <li>{{concerthall}}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>선택할 수 있는 지역이 없습니다.</p>
+{% endif %}

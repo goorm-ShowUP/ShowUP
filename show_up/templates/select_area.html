@@ -1,7 +1,7 @@
 {% if area_list %}
 <ul>
   {% for area in area_list %}
-  <li><a href="/choosearea/{{area}}">{{area}}</a></li>
+  <li><a href="{% url 'show_area_concerthall' cluster area%}">{{area}}</a></li>
   {% endfor %}
 </ul>
 {% else %}

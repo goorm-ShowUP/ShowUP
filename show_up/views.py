@@ -9,19 +9,48 @@ from sklearn import datasets, model_selection
 from lightgbm import LGBMClassifier
 from sklearn.metrics import f1_score,accuracy_score
 import joblib
-
 from show_up.models import Show
 
 def index(request):
     # excel_to_db()
+    predict()
     return render(request,'index.html')
 
 
 
-def predict(request):
+def predict():
+    
+    # 예시
+    # 인덱스 9872행
+    sample_df = pd.DataFrame({
+    '첫가격' : [80000],
+    'genre' : ['대중음악'],
+    '공연 런타임' : [130],
+    '공연기간(일수)' : [1],
+    '공연관람연령' : [14],
+    })
+    
+    genre_df= pd.DataFrame({
+        'genre':["대중음악",'무용','뮤지컬','복합','서양음악(클래식)','서커스/마술','연극','한국음악(국악)']
+    })
+    print(genre_df)
+    print(sample_df.iloc[0]['genre'])
+    #범주형/연속형 변수 분리
+    con_col = ['price','runtime','period','age']
+    # cat_col = ['genre']
+    
+    #get_dummies()로 범주형 변수 원핫인코딩
+    g = pd.get_dummies(sample_df.iloc[0]['genre'], columns=genre_df['genre'], drop_first=True)
+    print(g)
+    # scaler 불러오기
+    scaler = joblib.load(open('scaler.pkl', 'rb'))
+    
+    # sample_df.loc[:,con_col] = scaler.transform(sample_df.loc[:,con_col])
+    # print(sample_df)
+    
     
     # lightgbm 모델 불러오기
-    model = joblib.load(open('lightgbm.pkl', 'rb'))
+    # model = joblib.load(open('lightgbm.pkl', 'rb'))
     
     # 모델 사용해서 클러스터 예측하기(괄호안에 DateFrame 형태로 넣으면 클러스터 반환함)
     # print(model.predict())   
@@ -31,13 +60,20 @@ def predict(request):
 
 def show_area(request):
     
-    공연전체데이터 = pd.read_excel('media/clustering.xlsx')
-    해당클러스터공연 = 공연전체데이터[공연전체데이터['clusters16']==7]
-    area_list = 해당클러스터공연['지역(시도)'].unique().tolist()
+    shows = Show.objects.filter(cluster=7)
+    공연데이터 = pd.DataFrame(list(shows.values()))
+    area_list = 공연데이터['sido'].unique().tolist()
     print(area_list)
-    context={'area_list': area_list}
+    context={'area_list': area_list,'cluster':7}
     return render(request,'select_area.html',context)
 
+def show_area_concerthall(request,s_cluster,s_area):
+    shows = Show.objects.filter(cluster=s_cluster,sido=s_area)
+    공연장데이터 = pd.DataFrame(list(shows.values()))
+    concerthall_list = 공연장데이터['concerthall'].unique().tolist()
+    print(concerthall_list)
+    context={'concerthall_list': concerthall_list}
+    return render(request,'show_concerthall.html',context)
 
 def excel_to_db():
     공연전체데이터s = pd.read_excel('media/clustering.xlsx')
