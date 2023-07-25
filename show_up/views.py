@@ -13,7 +13,7 @@ import joblib
 from show_up.models import Show
 
 def index(request):
-    excel_to_db()
+    # excel_to_db()
     return render(request,'index.html')
 
 
@@ -50,3 +50,5 @@ def excel_to_db():
     for i in range(len(공연전체데이터)):
         print(ss[i])
         Show.objects.create(showname=ss[i][0], concerthall=ss[i][1], sido=ss[i][2], gugun=ss[i][3], genre=ss[i][4], price=ss[i][5], age=ss[i][6], runtime=ss[i][7], period=ss[i][8], cluster=ss[i][9])
+
+

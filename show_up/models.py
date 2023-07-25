@@ -10,9 +10,10 @@ class Show(models.Model):
     sido = models.CharField(max_length=200)	      # 지역(시도)
     gugun = models.CharField(max_length=200)	  #지역(구군)
     genre = models.CharField(max_length=200)
-    price = models.IntegerField
-    age = models.IntegerField
-    runtime = models.IntegerField
-    period = models.IntegerField
-    cluster = models.IntegerField
+    price = models.IntegerField(null=True)
+    age = models.IntegerField(null=True)
+    runtime = models.IntegerField(null=True)
+    period = models.IntegerField(null=True)
+    cluster = models.IntegerField(null=True)
+    
     
