@@ -20,6 +20,7 @@ from show_up import views
 
 urlpatterns = [
     # path('show_up/', include('show_up.urls')),
+        # path('show_up/', include('show_up.urls')),
     path("admin/", admin.site.urls),
     path('price/', views.price, name="price"),
     path('genre/', views.genre, name="genre"),
