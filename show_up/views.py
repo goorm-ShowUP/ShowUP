@@ -26,7 +26,6 @@ def genre(request):
         #int값 외 다른값 들어올 시 처리 해야함
         choice.price = int(request.POST['price'])
         print(request.POST)
-        choice.save()
 
     return render(request,'show_up/genre.html')
 

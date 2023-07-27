@@ -75,14 +75,14 @@ WSGI_APPLICATION = "showup.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'show', 
-        'USER': 'root', 
-        'PASSWORD': '0605abcdA', 
-        'HOST': 'localhost', 
-        'PORT': '3306', 
-     } 
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'showup',
+        'USER': 'goorm',
+        'PASSWORD': 'goorm123',
+        'HOST': 'mysql.chuuhhuduqop.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306',
+     }
 }
 
 
