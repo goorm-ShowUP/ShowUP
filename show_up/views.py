@@ -13,60 +13,59 @@ from show_up.models import Show
 
 def index(request):
     # excel_to_db()
-    predict()
+    print(predict())
     return render(request,'index.html')
 
 
-
-def predict():
-    
-    # 예시
-    # 인덱스 9872행
+# 사용자 인풋 값 전처리 후 모델 적용해 cluster값 추출
+def predict(): 
+    # 예시 데이터
+    # 인덱스 9872행  => 클러스터 7로 예측해줘야함
     sample_df = pd.DataFrame({
     '첫가격' : [80000],
-    'genre' : ['대중음악'],
+    '장르' : ['대중음악'],
     '공연 런타임' : [130],
     '공연기간(일수)' : [1],
     '공연관람연령' : [14],
     })
     
-    genre_df= pd.DataFrame({
-        'genre':["대중음악",'무용','뮤지컬','복합','서양음악(클래식)','서커스/마술','연극','한국음악(국악)']
-    })
-    print(genre_df)
-    print(sample_df.iloc[0]['genre'])
-    #범주형/연속형 변수 분리
-    con_col = ['price','runtime','period','age']
-    # cat_col = ['genre']
+    genre_df= pd.DataFrame(
+        [[0,0,0,0,0,0,0,0]],
+        columns=["장르_대중음악",'장르_무용','장르_뮤지컬','장르_복합','장르_서양음악(클래식)','장르_서커스/마술','장르_연극','장르_한국음악(국악)']
+    )
+
+    g="장르_"+sample_df['장르'][0]
+    genre_df[g][0]=1
+
+    con_col = ['첫가격','공연 런타임','공연기간(일수)','공연관람연령']
     
-    #get_dummies()로 범주형 변수 원핫인코딩
-    g = pd.get_dummies(sample_df.iloc[0]['genre'], columns=genre_df['genre'], drop_first=True)
-    print(g)
-    # scaler 불러오기
     scaler = joblib.load(open('scaler.pkl', 'rb'))
     
-    # sample_df.loc[:,con_col] = scaler.transform(sample_df.loc[:,con_col])
-    # print(sample_df)
+    sample_df.loc[:,con_col] = scaler.transform(sample_df.loc[:,con_col])
+    sample_df=sample_df.drop('장르', axis = 'columns')
     
+    df=pd.concat([sample_df,genre_df],axis=1)
     
     # lightgbm 모델 불러오기
-    # model = joblib.load(open('lightgbm.pkl', 'rb'))
-    
+    model = joblib.load(open('lightgbm.pkl', 'rb'))
     # 모델 사용해서 클러스터 예측하기(괄호안에 DateFrame 형태로 넣으면 클러스터 반환함)
-    # print(model.predict())   
+    cluster=model.predict(df)[0]
     
-# def choose_area(request):
-#     return
+    return cluster
+    
 
+# 해당 클러스터의 공연장 지역 목록 보여주기
 def show_area(request):
     
-    shows = Show.objects.filter(cluster=7)
+    shows = Show.objects.filter(cluster=7)    # 괄호 값 넘어오는 클러스터 값으로 변경 필요
     공연데이터 = pd.DataFrame(list(shows.values()))
     area_list = 공연데이터['sido'].unique().tolist()
     print(area_list)
-    context={'area_list': area_list,'cluster':7}
+    context={'area_list': area_list,'cluster':7}    # 괄호 값 넘어오는 클러스터 값으로 변경 필요
     return render(request,'select_area.html',context)
 
+
+# 선택한 지역들의 공연장 목록 보여주기
 def show_area_concerthall(request,s_cluster,s_area):
     shows = Show.objects.filter(cluster=s_cluster,sido=s_area)
     공연장데이터 = pd.DataFrame(list(shows.values()))
@@ -75,6 +74,10 @@ def show_area_concerthall(request,s_cluster,s_area):
     context={'concerthall_list': concerthall_list}
     return render(request,'show_concerthall.html',context)
 
+
+
+
+# 엑셀데이터 db저장
 def excel_to_db():
     공연전체데이터s = pd.read_excel('media/clustering.xlsx')
     공연전체데이터 = pd.DataFrame(공연전체데이터s)

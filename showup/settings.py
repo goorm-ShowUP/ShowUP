@@ -78,10 +78,10 @@ WSGI_APPLICATION = "showup.wsgi.application"
 DATABASES = {
 	'default': { 
     	'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'show', 
-        'USER': 'root', 
-        'PASSWORD': '0605abcdA', 
-        'HOST': 'localhost', 
+        'NAME': 'showup', 
+        'USER': 'goorm', 
+        'PASSWORD': 'goorm123', 
+        'HOST': 'mysql.chuuhhuduqop.ap-northeast-2.rds.amazonaws.com', 
         'PORT': '3306', 
      } 
 }
