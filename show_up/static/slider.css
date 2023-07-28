@@ -1,0 +1,217 @@
+#range1 {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  
+  #range1::-webkit-slider-runnable-track {
+    height: 15px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.9) 46.35%, rgba(255, 255, 255, 0.09) 100%);
+    border-radius: 16px;
+  }
+  
+  #range1::-moz-range-track {
+    height: 15px;
+    background: #ccc;
+    border-radius: 16px;
+  }
+  
+  #range1::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #55BDB3;
+    box-shadow: -407px 0 0 400px #55BDB3;
+  }
+  
+  #range1::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #55BDB3;
+    box-shadow: -407px 0 0 400px #55BDB3;
+  }
+  
+  
+  /* range 2 */
+  #range2 {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    height: 6px;
+    background: #ccc;
+  }
+  
+  #range2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 15px;
+    width: 15px;
+    background-color: #55BDB3;
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+  }
+  
+  #range2::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #55BDB3;
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+    
+  }
+  
+  #range2::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.09)
+  }
+  #range2:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.09)
+  }
+  #range2:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.09)
+  }
+  
+  #range2::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.09)
+  }
+  #range2:active::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.09)
+  }
+  #range2:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.09)   
+  }
+  
+  .value2, .value3 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;    
+    width: 50px;
+    text-align: center;
+    white-space: nowrap;
+    color: #000000;
+}
+
+  /* range 3 */
+  #range3 {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    height: 20px;
+    height: 6px;
+    background: #ccc;
+  }
+  
+  #range3::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 30px;
+    width: 30px;
+    background: transparent;
+    background-image: url("https://ibaslogic.github.io/hosted-assets/smile.png");
+    background-size: cover;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+    transform: rotateZ(var(--thumb-rotate, 0deg));
+  }
+  
+  /* Thumb: Firefox */
+  #range3::-moz-range-thumb {
+    height: 30px;
+    width: 30px;
+    background: transparent;
+    background-image: url("https://ibaslogic.github.io/hosted-assets/smile.png");
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    transform: rotateZ(var(--thumb-rotate, 0deg));
+    transition: .2s ease-in-out;
+  }
+  
+  #range3::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.09)
+  }
+  #range3:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.09)
+  }
+  
+  #range3:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.09)
+  }
+  
+  #range3::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.09)
+  }
+  #range3:active::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.09)
+  }
+  #range3:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.09)    
+  }
+  
+  /*=============
+  Aesthetics 
+  =========================*/
+  
+  body {
+    font-family: system-ui;
+  }
+  
+  h1 {
+    color: #4b4949; 
+    text-align: center;
+  }
+  
+  .wrapper {
+    color: #3ac4b6; 
+    background: #55BDB3;
+    max-width:  1000px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+
+  
+  .range {
+    flex:1;
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    height: 4rem;
+    width: 100%;
+    background: #fff;
+    padding: 0px 10px;
+  }
+
+  .value2 {
+    margin-top: 40px;
+  }
+  
+  .won {
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+
+  
+  
